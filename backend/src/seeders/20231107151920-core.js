@@ -61,8 +61,8 @@ module.exports = {
             {
                 movie_id: 1,
                 screen_id: 1,
-                start_at: new Date("2023-10-27T18:00:00"),
-                end_at: new Date("2023-10-27T20:00:00"),
+                start_at: new Date(Date.now() + 86_400_000),
+                end_at: new Date(Date.now() + 87_000_000),
             },
             {
                 movie_id: 2,
@@ -73,8 +73,8 @@ module.exports = {
             {
                 movie_id: 1,
                 screen_id: 2,
-                start_at: new Date("2023-10-27T18:00:00"),
-                end_at: new Date("2023-10-27T20:00:00"),
+                start_at: new Date(Date.now() + 86_400_000 * 2),
+                end_at: new Date(Date.now() + 86_400_000 * 2 + 600_000),
             }
         ]);
     },

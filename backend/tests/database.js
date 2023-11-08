@@ -19,28 +19,19 @@ const umzug = new Umzug({
     },
     context: sequelize.getQueryInterface(),
     storage: new SequelizeStorage({ sequelize }),
-    logger: console
 });
 
 function test_db() {
-    beforeAll(async () => {
-        // Initial migration (set up the database)
-        await umzug.up({ steps: 1 }); 
-    });
-
     beforeEach(async () => {
         // Seed the database for each test
-        await umzug.up({ steps: 1 });
+        await umzug.up();
     });
 
     afterEach(async () => {
         // Unseed the database
-        await umzug.down({ steps: 1 });
-    });
-
-    afterAll(async () => {
         await umzug.down({ to: 0 });
     });
+
 }
 
 module.exports = { test_db };

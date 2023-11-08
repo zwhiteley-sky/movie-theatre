@@ -6,7 +6,6 @@ const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-console.log(__dirname);
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
@@ -16,6 +15,7 @@ if (process.env.NODE_ENV === "test") {
   sequelize = new Sequelize({
     dialect: "sqlite",
     database: "sqlite::memory:",
+    logging: false,
     define: { timestamps: false }
   });
 } else if (config.use_env_variable) {
