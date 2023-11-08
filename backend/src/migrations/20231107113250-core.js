@@ -22,6 +22,16 @@ module.exports = {
             }
         });
 
+        // Ensure no two users can have the same email/name
+        await queryInterface.addIndex("Users", {
+            fields: ["name"],
+            unique: true
+        });
+        await queryInterface.addIndex("Users", {
+            fields: ["email"],
+            unique: true
+        });
+
         await queryInterface.createTable('Movies', {
             id: {
                 type: Sequelize.INTEGER,

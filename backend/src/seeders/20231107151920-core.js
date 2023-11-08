@@ -18,7 +18,7 @@ module.exports = {
                 id: "739c016b-b413-4f47-90d2-639a1c095989",
                 name: "zachary",
                 email: "zachary@example.com",
-                hash: "$2a$12$upyA3Bi8gsFebstMo6/qvO/wd265iwopD/nkWVNGffl9E/2VAm1m."
+                hash: "$2a$12$30aijWjOSLkEeCLDyqVJCeT8opXaMU9EdzUQmYFFoIWWxX4SgOHa."
             }
         ]);
 
