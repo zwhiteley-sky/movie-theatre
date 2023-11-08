@@ -24,10 +24,12 @@ module.exports = {
 
         await queryInterface.bulkInsert("Movies", [
             {
+                id: 1,
                 name: "Five Nights at Freddy's",
                 release: new Date(2023, 10, 27)
             },
             {
+                id: 2,
                 name: "Sharknado",
                 release: new Date(2013, 7, 11)
             }
@@ -53,7 +55,6 @@ module.exports = {
             { screen_id: 2, name: "A3" },
             { screen_id: 2, name: "A4" },
             { screen_id: 2, name: "A5" },
-            { screen_id: 1, name: "A1" },
         ]);
 
         await queryInterface.bulkInsert("Showings", [
