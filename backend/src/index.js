@@ -4,6 +4,10 @@ require("dotenv").config({ path: "../.env" });
 const proxy = require("express-http-proxy");
 const { app } = require("./app");
 
+if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === "production") {
+    throw new Error("this file does not support a production environment");
+}
+
 const PORT = 4000;
 
 // Gateway (redirects all non API requests to NextJS)
