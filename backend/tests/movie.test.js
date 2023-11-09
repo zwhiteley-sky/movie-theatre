@@ -11,7 +11,8 @@ test("can get movie", async () => {
 
     expect(response.body).toMatchObject([
         { id: 1, name: "Five Nights at Freddy's" },
-        { id: 2, name: "Sharknado" }
+        { id: 2, name: "Sharknado" },
+        { id: 3, name: "Encanto" },
     ]);
 });
 

@@ -7,7 +7,7 @@ const movie_router = express.Router();
 
 const MOVIE_NOT_FOUND = 1;
 
-movie_router.get("/", async (req, res) => {
+movie_router.get("/", async (req, res, next) => {
     const movies = await Movie.findAll({
         attributes: ["id", "name"]
     });

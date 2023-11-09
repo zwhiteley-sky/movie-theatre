@@ -32,6 +32,11 @@ module.exports = {
                 id: 2,
                 name: "Sharknado",
                 release: new Date(2013, 7, 11)
+            },
+            {
+                id: 3,
+                name: "Encanto",
+                release: new Date(2021, 1, 1)
             }
         ]);
 
@@ -75,6 +80,30 @@ module.exports = {
                 screen_id: 2,
                 start_at: new Date(Date.now() + 86_400_000 * 2),
                 end_at: new Date(Date.now() + 86_400_000 * 2 + 600_000),
+            },
+            {
+                movie_id: 3,
+                screen_id: 1,
+                start_at: new Date(Date.now() + 86_400_000 * 2),
+                end_at: new Date(Date.now() + 86_400_000 * 2 + 600_000),
+            }
+        ]);
+
+        await queryInterface.bulkInsert("Bookings", [
+            {
+                user_id: "739c016b-b413-4f47-90d2-639a1c095989",
+                showing_id: 1,
+            }
+        ]);
+
+        await queryInterface.bulkInsert("BookingSeats", [
+            {
+                booking_id: 1,
+                seat_id: 1
+            },
+            {
+                booking_id: 1,
+                seat_id: 2
             }
         ]);
     },
