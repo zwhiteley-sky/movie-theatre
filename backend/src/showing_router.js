@@ -1,5 +1,5 @@
 const express = require("express");
-const { sequelize, Showing, Booking, Screen, Seat, Movie } = require("./models");
+const { sequelize, Showing, Booking, Seat, Movie } = require("./models");
 const { validate } = require("./validate");
 const { param, body, matchedData } = require("express-validator");
 const { Op } = require("sequelize");

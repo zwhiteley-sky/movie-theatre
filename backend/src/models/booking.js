@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 const {
     Model
-} = require('sequelize');
+} = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
     class Booking extends Model {
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Booking.init({}, {
         sequelize,
-        modelName: 'Booking',
+        modelName: "Booking",
         name: {
             singular: "booking",
             plural: "bookings"

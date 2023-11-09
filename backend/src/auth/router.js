@@ -1,5 +1,5 @@
 const express = require("express");
-const { body, validationResult, matchedData } = require("express-validator");
+const { body, matchedData } = require("express-validator");
 const { validate } = require("../validate");
 const { User } = require("../models");
 const { UniqueConstraintError } = require("sequelize");
@@ -127,7 +127,7 @@ function token_handler(req, res, next) {
             name: payload.name,
             email: payload.email
         };
-    } catch {} finally {
+    } catch { /* ignore */ } finally {
         next();
     }
 }

@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('Users', {
+        await queryInterface.createTable("Users", {
             id: {
                 type: Sequelize.UUID,
                 defaultValue: Sequelize.UUIDV4,
@@ -32,7 +32,7 @@ module.exports = {
             unique: true
         });
 
-        await queryInterface.createTable('Movies', {
+        await queryInterface.createTable("Movies", {
             id: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
@@ -172,12 +172,12 @@ module.exports = {
         });
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('BookingSeats');
-        await queryInterface.dropTable('Bookings');
-        await queryInterface.dropTable('Seats');
-        await queryInterface.dropTable('Showings');
-        await queryInterface.dropTable('Screens');
-        await queryInterface.dropTable('Movies');
-        await queryInterface.dropTable('Users');
+        await queryInterface.dropTable("BookingSeats");
+        await queryInterface.dropTable("Bookings");
+        await queryInterface.dropTable("Seats");
+        await queryInterface.dropTable("Showings");
+        await queryInterface.dropTable("Screens");
+        await queryInterface.dropTable("Movies");
+        await queryInterface.dropTable("Users");
     }
 };

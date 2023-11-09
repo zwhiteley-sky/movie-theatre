@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -109,12 +109,12 @@ module.exports = {
     },
 
     async down (queryInterface, Sequelize) {
-        await queryInterface.bulkDelete('BookingSeats', null, {});
-        await queryInterface.bulkDelete('Bookings', null, {});
-        await queryInterface.bulkDelete('Seats', null, {});
-        await queryInterface.bulkDelete('Showings', null, {});
-        await queryInterface.bulkDelete('Screens', null, {});
-        await queryInterface.bulkDelete('Movies', null, {});
-        await queryInterface.bulkDelete('Users', null, {});
+        await queryInterface.bulkDelete("BookingSeats", null, {});
+        await queryInterface.bulkDelete("Bookings", null, {});
+        await queryInterface.bulkDelete("Seats", null, {});
+        await queryInterface.bulkDelete("Showings", null, {});
+        await queryInterface.bulkDelete("Screens", null, {});
+        await queryInterface.bulkDelete("Movies", null, {});
+        await queryInterface.bulkDelete("Users", null, {});
     }
 };

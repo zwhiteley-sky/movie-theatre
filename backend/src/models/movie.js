@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 const {
     Model
-} = require('sequelize');
+} = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
     class Movie extends Model {
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
-        modelName: 'Movie',
+        modelName: "Movie",
         name: {
             singular: "movie",
             plural: "movies"

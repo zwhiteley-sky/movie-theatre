@@ -11,7 +11,7 @@ const validate = (validators) => {
         if (result.isEmpty()) return next();
         
         res.status(400).json({ error: result.array() });
-    }
-}
+    };
+};
 
 module.exports = { validate };

@@ -5,7 +5,7 @@ const { app } = require("./app");
 
 const PORT = 3000;
 
-app.use((err, req, res, next) => {
+app.use((err, req, res, _next) => {
     console.error(err);
     res.status(500).json({
         error_code: -1,
@@ -13,4 +13,4 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(3000);
+app.listen(PORT);
