@@ -23,7 +23,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         release: {
             type: DataTypes.DATEONLY,
-            allowNull: false
+            allowNull: false,
+            get() {
+                return new Date(this.getDataValue("release"));
+            }
         }
     }, {
         sequelize,

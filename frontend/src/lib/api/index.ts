@@ -7,3 +7,9 @@ export type {
     RegisterNameTaken,
 } from "./auth";
 export { login, register } from "./auth";
+
+export type {
+    MovieSummary,
+    Movie
+} from "./movie";
+export { get_movies, get_movie } from "./movie";

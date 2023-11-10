@@ -28,7 +28,11 @@ movie_router.get("/:id", validate([
     });
 
     if (movie) {
-        res.json(movie);
+        res.json({
+            id: movie.id,
+            name: movie.name,
+            release: movie.release
+        });
     }
     else res.status(404).send({
         error_code: MOVIE_NOT_FOUND,

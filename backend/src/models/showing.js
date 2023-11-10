@@ -21,11 +21,17 @@ module.exports = (sequelize, DataTypes) => {
     Showing.init({
         start_at: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: false,
+            get() {
+                return new Date(this.getDataValue("start_at"));
+            }
         },
         end_at: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: false,
+            get() {
+                return new Date(this.getDataValue("end_at"));
+            }
         }
     }, {
         sequelize,

@@ -29,7 +29,10 @@ booking_router.get("/", async (req, res) => {
                     }
                 },
                 attributes: ["id", "start_at"],
-                include: Movie
+                include: {
+                    model: Movie,
+                    attributes: ["id", "name"]
+                }
             }
         ],
         attributes: ["id"]

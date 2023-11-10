@@ -55,7 +55,10 @@ showing_router.get("/:id", validate([
 ]), async (req, res) => {
     const { id } = matchedData(req);
     const showing = await Showing.findByPk(id, {
-        include: Movie
+        include: {
+            model: Movie,
+            attributes: ["id", "name"]
+        }
     });
 
     if (!showing) return res.status(404).send({
