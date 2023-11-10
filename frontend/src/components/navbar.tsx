@@ -15,6 +15,7 @@ export function Navbar() {
             <h1 onClick={() => router.push("/")}>Movie Theatre</h1>
             <div className={styles["navbar-items"]}>
                 <Link href="/movies">Movies</Link>
+                <Link href="/showings">Showings</Link>
                 { 
                     user_info ? 
                         <a href="javascript:void" onClick={logout}>Logout</a> :

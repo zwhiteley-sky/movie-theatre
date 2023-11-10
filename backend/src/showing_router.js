@@ -41,6 +41,10 @@ showing_router.get("/", async (req, res) => {
             start_at: {
                 [Op.gt]: new Date()
             }
+        },
+        include: {
+            model: Movie,
+            attributes: ["id", "name"]
         }
     });
 
