@@ -1,0 +1,11 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 1px 1px 3px 0 var(--box-shadow-colour);
+}
